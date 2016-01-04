@@ -1,0 +1,16 @@
+%% -*- erlang -*-
+{application, snapaste,
+    [{description, "snapaste"},
+        {vsn, "0.1"},
+        {modules, []},
+        {registered, []},
+        {mod, {snapaste_app, []}},
+        {env, [
+            %% host and port for your site as seen from the outside world
+            {host, "localhost"},
+            {port, 8443},
+            %% certificate file for your domain
+            {certfile, "domain.crt"},
+            %% key file for your domain
+            {keyfile, "domain.key"}]},
+        {applications, [kernel, stdlib, crypto]}]}.
